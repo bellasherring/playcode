@@ -7,13 +7,12 @@ char subencrypt(char *phrase); //substitution encryption pt
 int main()
 {
     char phrase[206]; //phrase that will be encrypted
-    //char i=0; //counter to go through the letters of the phrase
     
     printf("Enter a phrase in capitals to substitutionally encrypt: \n"); //prompts phrase to be given
     scanf("%s", phrase); //reads phrase from the user
     
-    printf("The encryption is: \n");
-    subencrypt(phrase);
+    printf("The encryption is: \n"); 
+    subencrypt(phrase); //calls the substitutional encryption function and executes it
     
     printf(" \n"); //prints new line so running in the terminal looks nicer upon exit
     return 0;
