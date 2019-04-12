@@ -25,26 +25,84 @@ char subencrypt(char *phrase) //substitution encryption function definition
     {
         switch(phrase[i]) //for each letter case, the resulting letter is changed
         {
-            case 65: 
-                phrase[i]='S'; //A into S
+            case 65: //A
+                phrase[i]=rand()%26 + 65; 
                 break;
-            case 76: 
-                phrase[i]='R'; //L into R
+            case 66: //B
+                phrase[i]=rand()%26 + 65;
+                if
                 break;
-            case 80:
-                phrase[i]='A'; //P into A
+            case 67: //C
+                phrase[i]=rand()%26 + 65; 
                 break;
-            case 72:
-                phrase[i]='F'; //H into F
+            case 68: //D
+                phrase[i]=rand()%26 + 65; 
                 break;
-            case 66:
-                phrase[i]='N'; //B into N
+            case 69: //E
+                phrase[i]=rand()%26 + 65; 
                 break;
-            case 69:
-                phrase[i]='O'; //E into O
+            case 70: //F
+                phrase[i]=rand()%26 + 65; 
                 break;
-            case 84:
-                phrase[i]='L'; //T into L
+            case 71: //G
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 72: //H
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 73: //I
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 74: //J
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 75: //K
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 76: //L
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 77: //M
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 78: //N
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 79: //O
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 80: //P
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 81: //Q
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 82: //R
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 83: //S
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 84: //T
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 85: //U
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 86: //V
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 87: //W
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 88: //X
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 89: //Y
+                phrase[i]=rand()%26 + 65; 
+                break;
+            case 90: //Z
+                phrase[i]=rand()%26 + 65; 
                 break;
         }
         printf("%c", phrase[i]); //prints letter by letter
