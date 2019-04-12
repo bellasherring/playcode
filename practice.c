@@ -2,21 +2,29 @@
 #include <stdlib.h>
 #include <string.h>
 
-char subencrypt(char *phrase, float key); //substitution encryption pt
+char subencrypt(char *phrase); //substitution encryption pt
 
 int main()
 {
     char phrase[206]; //phrase that will be encrypted
-    char i=0; //counter to go through the letters of the phrase
+    //char i=0; //counter to go through the letters of the phrase
     
-    printf("Enter a phrase in capitals to substitutionally encrypt: \n");
-    scanf("%s", phrase);
+    printf("Enter a phrase in capitals to substitutionally encrypt: \n"); //prompts phrase to be given
+    scanf("%s", phrase); //reads phrase from the user
     
     printf("The encryption is: \n");
+    subencrypt(phrase);
     
+    printf(" \n"); //prints new line so running in the terminal looks nicer upon exit
+    return 0;
+}
+
+char subencrypt(char *phrase) //substitution encryption function definition
+{
+    char i=0;
     while(phrase[i] != 0) //will stop when the phrase is over
     {
-        switch(phrase[i])
+        switch(phrase[i]) //for each letter case, the resulting letter is changed
         {
             case 65: 
                 phrase[i]='S'; //A into S
@@ -40,15 +48,7 @@ int main()
                 phrase[i]='L'; //T into L
                 break;
         }
-        printf("%c", phrase[i]);
-        i++;
+        printf("%c", phrase[i]); //prints letter by letter
+        i++; //increments to encrypt the next letter of the phrase
     }
-    
-    printf(" \n"); //prints new line so running in the terminal looks nicer upon exit
-    return 0;
-}
-
-char subencrypt(char *phrase, float key) //substitution encryption
-{
-    
 }
