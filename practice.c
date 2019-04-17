@@ -3,7 +3,7 @@
 #include <string.h>
 
 char subencrypt(char *phrase); //substitution encryption pt
-char alphabetencrypt(char *alphabet);
+char alphabetencrypt(char *phrase, char x);
 
 int main()
 {
@@ -12,30 +12,33 @@ int main()
     
     printf("Enter a phrase in capitals to substitutionally encrypt: \n"); //prompts phrase to be given
     scanf("%s", phrase); //reads phrase from the user
-    alphabetencrypt(alphabet); //calls the alphabet encryption function and executes it
     
     printf("The encryption is: \n"); 
-    
+    subencrypt(phrase);
     
     printf(" \n"); //prints new line so running in the terminal looks nicer upon exit
     return 0;
 }
 
-char alphabetencrypt(char *alphabet) //alphabet substitution encryption function definition
+char subencrypt(char *phrase) //regular substitution function
 {
-    char i=0;
-    alphabet[200]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    char encryption[200]="QAZXSWEDCVFRTGBNHYUJMKILOP";
-    while (alphabet[i] != 0) //assigns alphabet letters to the new substituted letters
+    char i=0, x=0;
+    char alphabet[200]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    while(phrase[i] != 0)
     {
-        //printf("alphabet %c encryption %c", alphabet[i], encryption[i]);
-        alphabet[i]=encryption[i];
-        //printf(" new version of alphabet %c\n", alphabet[i]);
+        while(phrase[i] != alphabet[x])
+        {
+            x++;
+        }
+        alphabetencrypt(phrase, x);
         i++;
     }
 }
 
-char subencrypt(char *phrase) //regular substitution function
+char alphabetencrypt(char *phrase, char x)
 {
-    char i=0;
+    char alphabet[200]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char encryptionKey[200]="QAZXSWEDCVFRTGBNHYUJMKILOP";
+    alphabet[x]=encryptionKey[x];
+    printf("%c", encryptionKey[x]);
 }
