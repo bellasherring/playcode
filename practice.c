@@ -2,46 +2,41 @@
 #include <stdlib.h>
 #include <string.h>
 
-char subencrypt(char *phrase, char *encryptionKey); //substitution encryption pt
-char alphabetencrypt(char *phrase, char x, char *encryptionKey);
-
 int main()
 {
-    char phrase[206]; //phrase that will be encrypted
-    char alphabet[200]; //alphabet for alphabet encryption function
-    char encryptionKey[200];
+    char phrase[300];
+    char i=0;
     
-    printf("Enter a phrase in capitals to substitutionally encrypt: \n"); //prompts phrase to be given
-    scanf("%s", phrase); //reads phrase from the user
+    printf("Phrase: \n");
+    scanf("%c", phrase);
     
-    printf("Enter an encyption key, a string of capital letters with no spaces:\n");
-    scanf("%s", encryptionKey);
+    int countA=0;
+    int countB=0;
+    int countC=0;
+    int countD=0;
     
-    printf("The encryption is: \n"); 
-    subencrypt(phrase, encryptionKey);
+    while(phrase[i] != 0)
+    {
+        if(phrase[i]==65)
+        {
+            countA++;
+        }
+        else if(phrase[i]==66)
+        {
+            countB++;
+        }
+        else if(phrase[i]==67)
+        {
+            countC++;
+        }
+        else if(phrase[i]==68)
+        {
+            countD++;
+        }
+        i++;
+    }
     
-    printf(" \n"); //prints new line so running in the terminal looks nicer upon exit
+    printf("A: %d\nB: %d\nC: %d\nD: %d\n", countA, countB, countC, countD);
     return 0;
 }
 
-char subencrypt(char *phrase, char *encryptionKey) //regular substitution function
-{
-    char i=0, x=0;
-    char alphabet[200]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    while(phrase[i] != 0)
-    {
-        while(phrase[i] != alphabet[x])
-        {
-            x++;
-        }
-        alphabetencrypt(phrase, x, encryptionKey);
-        i++;
-    }
-}
-
-char alphabetencrypt(char *phrase, char x, char *encryptionKey)
-{
-    char alphabet[200]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    alphabet[x]=encryptionKey[x];
-    printf("%c", encryptionKey[x]);
-}
