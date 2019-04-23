@@ -106,13 +106,13 @@ int main()
         x=0;
     }
     
-    //printf("%d %d\n", countB, countL); //for testing
     //stores the number of each character in a certain place in the data string
-    data[0]=countA; data[1]=countB; data[2]=countC; data[3]=countD; data[4]=countE; data[5]=countF; data[6]=countG;
-    data[7]=countH; data[8]=countI; data[9]=countJ; data[10]=countK; data[11]=countL; data[12]=countM;
-    data[13]=countN; data[14]=countO; data[15]=countP; data[16]=countQ; data[17]=countR; data[18]=countS;
-    data[19]=countT; data[20]=countU; data[21]=countV; data[22]=countW; data[23]=countX; data[24]=countY;
-    data[25]=countZ;
+    data[0]=countA; data[1]=countB; data[2]=countC; data[3]=countD; data[4]=countE; data[5]=countF; 
+    data[6]=countG; data[7]=countH; data[8]=countI; data[9]=countJ; data[10]=countK; data[11]=countL; 
+    data[12]=countM; data[13]=countN; data[14]=countO; data[15]=countP; data[16]=countQ; data[17]=countR; 
+    data[18]=countS; data[19]=countT; data[20]=countU; data[21]=countV; data[22]=countW; data[23]=countX; 
+    data[24]=countY; data[25]=countZ;
+    
     int maximum=-1e30;
     int maxindex=0;
     i=0;
