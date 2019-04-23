@@ -4,15 +4,18 @@
 
 int main()
 {
+    //initialising variables
     char phrase[300];
-    char count[30]; 
     int i=0;
     char x=0;
     int countA=0, countB=0, countC=0, countD=0, countE=0, countF=0, countG=0, countH=0, countI=0, countJ=0, countK=0, countL=0, countM=0, countN=0, countO=0, countP=0, countQ=0, countR=0, countS=0, countT=0, countU=0, countV=0, countW=0, countX=0, countY=0, countZ=0;
-        
+    int data[26];
+    
+    //gets the phrase from the user
     printf("Phrase: \n");
     scanf("%[^\n]s", phrase);
     
+    //counts the amount of each letter in the phrase
     while(phrase[i] != '\0')
     {
         x=phrase[i];
@@ -102,10 +105,29 @@ int main()
         i++;
         x=0;
     }
-    printf("\n A: %d \n B: %d \n C: %d \n D: %d \n E: %d \n F: %d \n G: %d \n H: %d \n ", countA, countB, countC, countD, countE, countF, countG, countH);
-    printf("I: %d \n J: %d \n K: %d \n L: %d \n M: %d \n N: %d \n O: %d \n P: %d \n ", countI, countJ, countK, countL, countM, countN, countO, countP);
-    printf("Q: %d \n R: %d \n S: %d \n T: %d \n U: %d \n V: %d \n W: %d \n X: %d \n Y: %d \n Z: %d \n", countQ, countR, countS, countT, countU, countV, countW, countX, countY, countZ);
-
+    
+    //printf("%d %d\n", countB, countL); //for testing
+    //stores the number of each character in a certain place in the data string
+    data[0]=countA; data[1]=countB; data[2]=countC; data[3]=countD; data[4]=countE; data[5]=countF; data[6]=countG;
+    data[7]=countH; data[8]=countI; data[9]=countJ; data[10]=countK; data[11]=countL; data[12]=countM;
+    data[13]=countN; data[14]=countO; data[15]=countP; data[16]=countQ; data[17]=countR; data[18]=countS;
+    data[19]=countT; data[20]=countU; data[21]=countV; data[22]=countW; data[23]=countX; data[24]=countY;
+    data[25]=countZ;
+    int maximum=-1e30;
+    int maxindex=0;
+    i=0;
+    
+    while(i<26)  //while the elements don't equal 0, a new line
+    {
+        if(data[i]>maximum)
+        {
+            maximum=data[i];    //the new maximum is assigned to the element number i
+            maxindex=i;     //max index is set as i
+        }
+        i++;    //add another
+    }
+    
+    printf("%d at index %d\n", maximum, maxindex); //testing that the maximum finds the right number
+    
     return 0;
 }
-
