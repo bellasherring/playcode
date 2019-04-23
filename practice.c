@@ -96,18 +96,7 @@ int main()
             case 90:
                 countZ++;
                 break;
-            case ' ':
-                break;
-            case '.':
-                break;
-            case '?':
-                break;
-            case '!':
-                break;
-            case 96: //'
-                break;
             default:
-                printf("\n");
                 break;
         }
         i++;
